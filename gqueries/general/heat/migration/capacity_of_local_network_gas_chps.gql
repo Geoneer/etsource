@@ -1,3 +1,5 @@
+# The output of this query can be used to set the new "capacity_of_energy_chp_local_engine_network_gas" input.
+
 - unit = MW
 - query =
     SUM(

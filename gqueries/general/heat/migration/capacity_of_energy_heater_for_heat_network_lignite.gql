@@ -1,3 +1,5 @@
+# The output of this query can be used to set the new "capacity_of_industry_heat_burner_lignite" input.
+
 - unit = MW
 - query =
     SUM(
