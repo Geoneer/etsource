@@ -1,0 +1,8 @@
+# The output of this query can be, among others, used to set the new "capacity_of_energy_heat_burner_crude_oil" input.
+
+- unit = MW
+- query =
+    PRODUCT(
+      V(energy_heater_for_heat_network_crude_oil, number_of_units),
+      V(energy_heater_for_heat_network_crude_oil, heat_output_capacity)
+    )

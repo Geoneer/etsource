@@ -1,0 +1,4 @@
+# The demand of heat in the industry sector that is supplied by the central steam hot water distribution
+
+- unit = MJ
+- query = V(LINK(energy_heat_network_steam_hot_water,industry_locally_available_steam_hot_water),demand)

@@ -2,9 +2,7 @@
 
 - unit = MW
 - query =
-    SUM(
-      PRODUCT(
-        V(energy_heater_for_heat_network_waste_mix, number_of_units),
-        V(energy_heater_for_heat_network_waste_mix, heat_output_capacity)
-      )
+    PRODUCT(
+      V(energy_heater_for_heat_network_waste_mix, number_of_units),
+      V(energy_heater_for_heat_network_waste_mix, heat_output_capacity)
     )

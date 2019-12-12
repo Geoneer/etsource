@@ -1,0 +1,8 @@
+# The output of this query is, among others, needed to set the new "capacity_of_energy_heat_burner_crude_oil" input.
+
+- unit = MW
+- query =
+    SUM(
+      Q(capacity_of_energy_heater_for_heat_network_oil),
+      NEG(Q(capacity_of_industry_heat_burner_crude_oil))
+    )

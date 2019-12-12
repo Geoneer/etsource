@@ -1,0 +1,7 @@
+# The output of this query can be used to set the new "capacity_of_energy_heat_well_geothermal" input.
+#
+# FLH of energy_heat_well_geothermal: 6000
+# MJ to MWH: 1/3600
+
+- unit = MW
+- query = Q(steam_hot_water_production_of_energy_heat_well_geothermal) / 6000 * (1/3600)

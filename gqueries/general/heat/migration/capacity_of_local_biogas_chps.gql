@@ -1,5 +1,7 @@
 # The output of this query can be used to set the new "capacity_of_energy_chp_local_engine_biogas" input.
 
+# TODO: update the 1.0 (line 20) for increase in efficiency (because of dumped heat)
+
 - unit = MW
 - query =
     SUM(
@@ -15,4 +17,4 @@
         V(agriculture_chp_engine_biogas, number_of_units),
         V(agriculture_chp_engine_biogas, heat_output_capacity)
       )
-    ) * 1.0 # TODO: update for increase in efficiency (because of dumped heat)
+    ) * 1.0

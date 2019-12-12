@@ -1,0 +1,8 @@
+# The output of this query is, among others, needed to set the new "capacity_of_industry_heat_burner_coal" input.
+
+- unit = MJ
+- query =
+    MIN(
+      Q(steam_hot_water_production_of_energy_heater_for_heat_network_coal),
+      Q(heat_deficit_in_industry)
+    )

@@ -1,0 +1,7 @@
+# The output of this query can be used to set the new "capacity_of_industry_heat_burner_crude_oil" input.
+#
+# FLH of industry_heat_burner_crude_oil: 2190
+# MJ to MWH: 1/3600
+
+- unit = MW
+- query = Q(steam_hot_water_production_of_industry_heat_burner_crude_oil) / 2190 * (1/3600)

@@ -1,0 +1,8 @@
+# The output of this query is, among others, needed to set the new "capacity_of_industry_heat_well_geothermal" input.
+
+- unit = MJ
+- query =
+    SUM(
+      V(households_collective_geothermal, output_of_steam_hot_water),
+      V(buildings_collective_geothermal, output_of_steam_hot_water)
+    )
