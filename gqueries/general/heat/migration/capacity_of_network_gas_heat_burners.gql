@@ -1,0 +1,16 @@
+- unit = MW
+- query =
+    SUM(
+      PRODUCT(
+        V(households_collective_burner_network_gas, number_of_units),
+        V(households_collective_burner_network_gas, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(buildings_collective_burner_network_gas, number_of_units),
+        V(buildings_collective_burner_network_gas, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(energy_heater_for_heat_network_network_gas, number_of_units),
+        V(energy_heater_for_heat_network_network_gas, heat_output_capacity)
+      )
+    )

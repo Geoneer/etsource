@@ -1,0 +1,16 @@
+- unit = MW
+- query =
+    SUM(
+      PRODUCT(
+        V(households_collective_chp_biogas, number_of_units),
+        V(households_collective_chp_biogas, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(buildings_chp_engine_biogas, number_of_units),
+        V(buildings_chp_engine_biogas, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(agriculture_chp_engine_biogas, number_of_units),
+        V(agriculture_chp_engine_biogas, heat_output_capacity)
+      )
+    ) * 1.0 # TODO: update for increase in efficiency (because of dumped heat)

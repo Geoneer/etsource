@@ -1,0 +1,12 @@
+- unit = MW
+- query =
+    SUM(
+      PRODUCT(
+        V(households_collective_heatpump_water_water_electricity, number_of_units),
+        V(households_collective_heatpump_water_water_electricity, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(buildings_collective_heatpump_water_water_electricity, number_of_units),
+        V(buildings_collective_heatpump_water_water_electricity, heat_output_capacity)
+      )
+    )

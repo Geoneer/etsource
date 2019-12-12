@@ -1,0 +1,12 @@
+- unit = MW
+- query =
+    SUM(
+      PRODUCT(
+        V(households_collective_burner_hydrogen, number_of_units),
+        V(households_collective_burner_hydrogen, heat_output_capacity)
+      ),
+      PRODUCT(
+        V(buildings_collective_burner_hydrogen, number_of_units),
+        V(buildings_collective_burner_hydrogen, heat_output_capacity)
+      )
+    )
