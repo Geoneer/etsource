@@ -6,6 +6,6 @@
       Q(steam_hot_water_production_of_energy_heater_for_heat_network_crude_oil),
       SUM(
         Q(heat_deficit_in_industry),
-        NEG(Q(steam_hot_water_production_of_energy_heater_for_heat_network_coal))
+        NEG(Q(steam_hot_water_production_of_industry_heat_burner_coal))
       )
     )
