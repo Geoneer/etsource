@@ -1,0 +1,13 @@
+# CO2 of carrier group 'biomass_products' ()
+
+- unit = tonne
+- query =
+    SUM(
+      V(G(co2_emissions_primary),primary_demand_of_wood_pellets).sum * V(CARRIER(primary_demand_of_wood_pellets), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_torrefied_biomass_pellets).sum * V(CARRIER(primary_demand_of_torrefied_biomass_pellets), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_bio_ethanol).sum * V(CARRIER(primary_demand_of_bio_ethanol), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_bio_kerosene).sum * V(CARRIER(primary_demand_of_bio_kerosene), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_bio_oil).sum * V(CARRIER(primary_demand_of_bio_oil), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_biodiesel).sum * V(CARRIER(primary_demand_of_biodiesel), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_imported_electricity).sum * V(CARRIER(imported_electricity), co2_per_mj)
+    ) / THOUSANDS

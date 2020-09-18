@@ -1,0 +1,9 @@
+# CO2 of carrier group 'heat' ('useable_heat' and 'steam_hot_water')
+
+- unit = tonne
+- query =
+    SUM(
+      V(G(co2_emissions_primary),primary_demand_of_useable_heat).sum * V(CARRIER(useable_heat), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_steam_hot_water).sum * V(CARRIER(steam_hot_water), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_imported_heat).sum * V(CARRIER(imported_heat), co2_per_mj)
+    ) / THOUSANDS

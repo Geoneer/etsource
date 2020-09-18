@@ -1,7 +1,8 @@
-# CO2 of carrier group 'imported electricity'
+# CO2 of carrier group 'electricity'
 
 - unit = tonne
 - query =
     SUM(
+      V(G(co2_emissions_primary),primary_demand_of_electricity).sum * V(CARRIER(electricity), co2_per_mj)
       V(G(co2_emissions_primary),primary_demand_of_imported_electricity).sum * V(CARRIER(imported_electricity), co2_per_mj)
     ) / THOUSANDS

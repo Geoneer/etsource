@@ -1,0 +1,8 @@
+# CO2 of carrier group 'waste' ('biogenic_waste' and 'non_biogenic_waste')
+
+- unit = tonne
+- query =
+    SUM(
+      V(G(co2_emissions_primary),primary_demand_of_biogenic_waste).sum * V(CARRIER(biogenic_waste), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_non_biogenic_waste).sum * V(CARRIER(non_biogenic_waste), co2_per_mj)
+    ) / THOUSANDS

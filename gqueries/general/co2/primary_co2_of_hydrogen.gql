@@ -1,0 +1,8 @@
+# CO2 of carrier group 'hydrogen'
+
+- unit = tonne
+- query =
+    SUM(
+      V(G(co2_emissions_primary),primary_demand_of_hydrogen).sum * V(CARRIER(hydrogen), co2_per_mj),
+      V(G(co2_emissions_primary),primary_demand_of_imported_hydrogen).sum * V(CARRIER(imported_hydrogen), co2_per_mj),
+    ) / THOUSANDS
