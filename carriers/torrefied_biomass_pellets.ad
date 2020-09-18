@@ -3,6 +3,6 @@
 - cost_per_mj = 0.006258700201093315
 - mj_per_kg = 21.549999999999997
 - co2_conversion_per_mj = 0.0
-- potential_co2_conversion_per_mj = 0.112
+- potential_co2_conversion_per_mj = 1.0
 - graphviz_color = green
 - typical_production_per_km2 = 44651599.99999999
